@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Nuestra primera webapp en JQuery Mobile </title>
+<meta meta name="viewport" content="width=device-width, initial-scale=1" >
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" / >
+<script src= "http://code.jquery.com/jquery-1.9.1.min.js"></script >
+<script src= "http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js" ></script >
+
+
+
+</head>
+<body>
+<div data-role="page" id="Inicio">
+	<div data-role="header">
+		<h1>Inicio</h1>
+	</div>
+	<div data-role="content">
+     
+		     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+			 
+	 <input type="button" value="Mensaje" id="hola-mundo"/>	
+		
+    </div>
+	<div data-role="footer" data-position="fixed">
+     <div data-role="navbar">
+            <ul>
+                <li><a href="#Inicio" data-icon="home" class="ui-btn-active" data-transition="fade">Inicio</a></li>
+                <li><a href="#listado" data-icon="search" data-transition="fade">Listado</a></li>
+                <li><a href="#formulario" data-icon="star" data-transition="fade">Formulario</a></li>
+            </ul>
+         </div>
+	</div>
+	</div>
+</div>
+
+<div data-role="page" id="listado">
+	<div data-role="header">
+		<h1>Listado</h1>
+	</div>
+	<div data-role="content">
+     
+		  <ul data-role="listview" data-filter="true" data-filter-placeholder="Buscar ..." data-inset="true">
+            <li><a href="#Inicio">Inicio</a></li>
+            <li><a href="#listado">Listado</a></li>
+            <li><a href="#formulario">Formulario</a></li>
+        </ul>
+		
+    </div>
+	<div data-role="footer" data-position="fixed">
+     <div data-role="navbar">
+            <ul>
+                  <li><a href="#Inicio" data-icon="home" class="ui-btn-active" data-transition="fade">Inicio</a></li>
+                <li><a href="#listado" data-icon="search" data-transition="fade">Listado</a></li>
+                <li><a href="#formulario" data-icon="star" data-transition="fade">Formulario</a></li>
+            </ul>
+         </div>
+	</div>
+	</div>
+</div>
+
+<div data-role="page" id="formulario">
+	<div data-role="header">
+		<h1>Formulario</h1>
+	</div>
+	<div data-role="content">
+     
+		 <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" value="" placeholder="Escriba su nombre" data-clear-btn="true">
+            <label for="mensaje">Mensaje:</label>
+            <textarea cols="40" rows="8" name="mensaje" id="mensaje" placeholder="Escriba su mensaje"></textarea>
+            <input type="button" value="Enviar" id="enviar" />
+        </form>
+		
+    </div>
+	<div data-role="footer" data-position="fixed">
+     <div data-role="navbar">
+            <ul>
+                  <li><a href="#Inicio" data-icon="home" class="ui-btn-active" data-transition="fade">Inicio</a></li>
+                <li><a href="#listado" data-icon="search" data-transition="fade">Listado</a></li>
+                <li><a href="#formulario" data-icon="star" data-transition="fade">Formulario</a></li>
+            </ul>
+         </div>
+	</div>
+	</div>
+</div>
+
+
+<script >
+
+$( "#hola-mundo" ).bind( "click", function(event, ui) {
+  alert("Hola Mundo!");
+});
+
+$( "#enviar" ).bind( "click", function(event, ui) {
+    var nombre = $("#nombre").val();
+    var mensaje = $("#mensaje").val();
+    alert('nombre: ' + nombre + '\nmensaje: ' + mensaje);
+});
+</script>
+
+</body>
+
+</html>
