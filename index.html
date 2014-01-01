@@ -1,105 +1,2365 @@
 <!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
 <html>
-<head>
-<title>Nuestra primera webapp en JQuery Mobile </title>
-<meta meta name="viewport" content="width=device-width, initial-scale=1" >
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" / >
-<script src= "http://code.jquery.com/jquery-1.9.1.min.js"></script >
-<script src= "http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js" ></script >
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link href="jquery-mobile/jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css"/>
+       <script src="jquery-mobile/jquery-1.6.4.min.js" type="text/javascript"></script>
+      <script src="jquery-mobile/jquery.mobile-1.0.min.js" type="text/javascript"></script>
 
-
-
-</head>
-<body>
-<div data-role="page" id="Inicio">
+        <title>Profundidad de campo</title>
+    </head>
+    <body>  
+    <div data-role="page" id="app">
+  
+	<div data-role="content">	
+        <div class="app">
+            <h1>PhoneGap</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received" ><a href="#page">Device is Ready</a></p>
+                 
+            </div>
+        </div>
+        </div>
+      </div>  
+        <div data-role="page" id="page">
 	<div data-role="header">
-		<h1>Inicio</h1>
+    	<h1>Introduccion de Datos</h1>
 	</div>
-	<div data-role="content">
-     
-		     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-			 
-	 <input type="button" value="Mensaje" id="hola-mundo"/>	
-		
-    </div>
-	<div data-role="footer" data-position="fixed">
-     <div data-role="navbar">
+	<div data-role="content">	
+    
+                      <label for="camara">Camara:</label>
+                      <select id="camara" name="camara" >
+                        <option id="text6" value="0.025">APS film</option>
+                        <option value="0.030"> 35mm film
+                        </option>
+                        <option value="0.045"> 6x4.5 film
+                        </option>
+                        <option value="0.045"> 6x6 film
+                        </option>
+                        <option value="0.060"> 6x7 film
+                        </option>
+                        <option value="0.070"> 6x9 film
+                        </option>
+                        <option value="0.100"> 4x5 film
+                        </option>
+                        <option value="0.150"> 5x7 film
+                        </option>
+                        <option value="0.200"> 8x10 film
+                            <!-- begin camera coc table -->
+                        </option>
+                        <option value="0.005">Agfa ePhoto CL-18
+                        </option>
+                        <option value="0.023">Canon 1D
+                        </option>
+                        <option value="0.023">Canon 1D Mark II
+                        </option>
+                        <option value="0.023">Canon 1D Mark II N
+                        </option>
+                        <option value="0.030">Canon 1DS
+                        </option>
+                        <option value="0.030">Canon 1Ds Mark II
+                        </option>
+                        <option value="0.030">Canon 5D
+                        </option>
+                        <option value="0.019">Canon 10D
+                        </option>
+                        <option value="0.019">Canon 20D
+                        </option>
+                        <option value="0.019">Canon 20Da
+                        </option>
+                        <option value="0.019">Canon 30D
+                        </option>
+                        <option value="0.019">Canon D30
+                        </option>
+                        <option value="0.019">Canon D60
+                        </option>
+                        <option value="0.019">Canon Digital Rebel / 300D
+                        </option>
+                        <option value="0.019" selected="">Canon Digital Rebel XT / 350D
+                        </option>
+                        <option value="0.019">Canon Digital Rebel XTi / 400D
+                        </option>
+                        <option value="0.005">Canon PowerShot A10
+                        </option>
+                        <option value="0.005">Canon PowerShot A20
+                        </option>
+                        <option value="0.005">Canon PowerShot A30
+                        </option>
+                        <option value="0.005">Canon PowerShot A40
+                        </option>
+                        <option value="0.005">Canon PowerShot A60
+                        </option>
+                        <option value="0.005">Canon PowerShot A70
+                        </option>
+                        <option value="0.005">Canon PowerShot A75
+                        </option>
+                        <option value="0.006">Canon PowerShot A80
+                        </option>
+                        <option value="0.005">Canon PowerShot A85
+                        </option>
+                        <option value="0.006">Canon PowerShot A95
+                        </option>
+                        <option value="0.004">Canon PowerShot A100
+                        </option>
+                        <option value="0.004">Canon PowerShot A200
+                        </option>
+                        <option value="0.005">Canon PowerShot A300
+                        </option>
+                        <option value="0.005">Canon PowerShot A310
+                        </option>
+                        <option value="0.004">Canon PowerShot A400
+                        </option>
+                        <option value="0.004">Canon PowerShot A430
+                        </option>
+                        <option value="0.005">Canon PowerShot A510
+                        </option>
+                        <option value="0.005">Canon PowerShot A520
+                        </option>
+                        <option value="0.005">Canon PowerShot A530
+                        </option>
+                        <option value="0.005">Canon PowerShot A540
+                        </option>
+                        <option value="0.006">Canon PowerShot A610
+                        </option>
+                        <option value="0.006">Canon PowerShot A620
+                        </option>
+                        <option value="0.006">Canon PowerShot A630
+                        </option>
+                        <option value="0.006">Canon PowerShot A640
+                        </option>
+                        <option value="0.005">Canon PowerShot A700
+                        </option>
+                        <option value="0.005">Canon PowerShot A710IS
+                        </option>
+                        <option value="0.006">Canon PowerShot G1
+                        </option>
+                        <option value="0.006">Canon PowerShot G2
+                        </option>
+                        <option value="0.006">Canon PowerShot G3
+                        </option>
+                        <option value="0.006">Canon PowerShot G5
+                        </option>
+                        <option value="0.006">Canon PowerShot G6
+                        </option>
+                        <option value="0.006">Canon PowerShot G7
+                        </option>
+                        <option value="0.008">Canon Powershot Pro1
+                        </option>
+                        <option value="0.006">Canon PowerShot Pro 90 IS
+                        </option>
+                        <option value="0.005">Canon Powershot S1 IS
+                        </option>
+                        <option value="0.005">Canon Powershot S2 IS
+                        </option>
+                        <option value="0.005">Canon Powershot S3 IS
+                        </option>
+                        <option value="0.006">Canon PowerShot S30
+                        </option>
+                        <option value="0.006">Canon PowerShot S40
+                        </option>
+                        <option value="0.006">Canon PowerShot S45
+                        </option>
+                        <option value="0.006">Canon PowerShot S50
+                        </option>
+                        <option value="0.006">Canon PowerShot S60
+                        </option>
+                        <option value="0.006">Canon PowerShot S70
+                        </option>
+                        <option value="0.006">Canon PowerShot S80
+                        </option>
+                        <option value="0.005">Canon PowerShot S110 Elph
+                        </option>
+                        <option value="0.005">Canon PowerShot S200 Elph
+                        </option>
+                        <option value="0.005">Canon PowerShot S230 Elf
+                        </option>
+                        <option value="0.005">Canon PowerShot S300 Elph
+                        </option>
+                        <option value="0.005">Canon PowerShot S330 Elph
+                        </option>
+                        <option value="0.006">Canon PowerShot S400
+                        </option>
+                        <option value="0.006">Canon PowerShot S410
+                        </option>
+                        <option value="0.006">Canon PowerShot S500
+                        </option>
+                        <option value="0.005">Canon Powershot SD10 Elph
+                        </option>
+                        <option value="0.005">Canon Powershot SD20 Elph
+                        </option>
+                        <option value="0.005">Canon Powershot SD30 Elph
+                        </option>
+                        <option value="0.005">Canon Powershot SD100 Elph
+                        </option>
+                        <option value="0.005">Canon Powershot SD110 Elph
+                        </option>
+                        <option value="0.005">Canon Powershot SD200
+                        </option>
+                        <option value="0.005">Canon Powershot SD300
+                        </option>
+                        <option value="0.005">Canon Powershot SD400
+                        </option>
+                        <option value="0.005">Canon Powershot SD430 Wireless
+                        </option>
+                        <option value="0.005">Canon Powershot SD450
+                        </option>
+                        <option value="0.006">Canon Powershot SD500
+                        </option>
+                        <option value="0.006">Canon Powershot SD550
+                        </option>
+                        <option value="0.005">Canon Powershot SD600
+                        </option>
+                        <option value="0.005">Canon Powershot SD630
+                        </option>
+                        <option value="0.005">Canon Powershot SD700 IS
+                        </option>
+                        <option value="0.005">Casio Exilim EX-S2
+                        </option>
+                        <option value="0.006">Casio Exilim EX-M2
+                        </option>
+                        <option value="0.005">Casio Exilim EX-P505
+                        </option>
+                        <option value="0.006">Casio Exilim EX-P600
+                        </option>
+                        <option value="0.006">Casio Exilim EX-P700
+                        </option>
+                        <option value="0.004">Casio Exilim EX-S100
+                        </option>
+                        <option value="0.005">Casio Exilim EX-S500
+                        </option>
+                        <option value="0.005">Casio Exilim EX-S600
+                        </option>
+                        <option value="0.005">Casio Exilim EX-S600D
+                        </option>
+                        <option value="0.005">Casio Exilim EX-S770
+                        </option>
+                        <option value="0.005">Casio Exilim EX-Z5
+                        </option>
+                        <option value="0.005">Casio Exilim EX-Z30
+                        </option>
+                        <option value="0.005">Casio Exilim EX-Z40
+                        </option>
+                        <option value="0.005">Casio Exilim EX-Z50
+                        </option>
+                        <option value="0.005">Casio Exilim EX-Z55
+                        </option>
+                        <option value="0.005">Casio Exilim EX-Z57
+                        </option>
+                        <option value="0.005">Casio Exilim EX-Z60
+                        </option>
+                        <option value="0.005">Casio Exilim EX-Z70
+                        </option>
+                        <option value="0.005">Casio Exilim EX-Z110
+                        </option>
+                        <option value="0.006">Casio Exilim EX-Z120
+                        </option>
+                        <option value="0.005">Casio Exilim EX-Z500
+                        </option>
+                        <option value="0.005">Casio Exilim EX-Z600
+                        </option>
+                        <option value="0.005">Casio Exilim EX-Z700
+                        </option>
+                        <option value="0.006">Casio Exilim EX-Z750
+                        </option>
+                        <option value="0.006">Casio Exilim EX-Z850
+                        </option>
+                        <option value="0.006">Casio Exilim EX-Z1000
+                        </option>
+                        <option value="0.006">Casio Exilim QV-R51
+                        </option>
+                        <option value="0.006">Casio Exilim QV-R61
+                        </option>
+                        <option value="0.006">Casio Exilim QV-R62
+                        </option>
+                        <option value="0.030">Contax N Digital
+                        </option>
+                        <option value="0.006">Contax TVS Digital
+                        </option>
+                        <option value="0.005">Contax SL300RT
+                        </option>
+                        <option value="0.006">Epson PhotoPC 3100 Z
+                        </option>
+                        <option value="0.005">Epson PhotoPC L-410
+                        </option>
+                        <option value="0.005">Epson L-500V
+                        </option>
+                        <option value="0.020">Epson RD-1
+                        </option>
+                        <option value="0.020">Epson RD-1S
+                        </option>
+                        <option value="0.005">Fujifilm FinePix 30i
+                        </option>
+                        <option value="0.005">Fujifilm FinePix A120
+                        </option>
+                        <option value="0.005">Fujifilm FinePix A203
+                        </option>
+                        <option value="0.005">Fujifilm FinePix A303
+                        </option>
+                        <option value="0.005">Fujifilm FinePix A330
+                        </option>
+                        <option value="0.005">Fujifilm FinePix A340
+                        </option>
+                        <option value="0.005">Fujifilm FinePix A345
+                        </option>
+                        <option value="0.005">Fujifilm FinePix A350
+                        </option>
+                        <option value="0.005">Fujifilm FinePix A400
+                        </option>
+                        <option value="0.007">Fujifilm FinePix A600
+                        </option>
+                        <option value="0.005">Fujifilm FinePix E500
+                        </option>
+                        <option value="0.005">Fujifilm FinePix E510
+                        </option>
+                        <option value="0.007">Fujifilm FinePix E550
+                        </option>
+                        <option value="0.007">Fujifilm FinePix E900
+                        </option>
+                        <option value="0.007">Fujifilm FinePix F10
+                        </option>
+                        <option value="0.007">Fujifilm FinePix F11
+                        </option>
+                        <option value="0.007">Fujifilm FinePix F20
+                        </option>
+                        <option value="0.007">Fujifilm FinePix F30
+                        </option>
+                        <option value="0.005">Fujifilm FinePix F401
+                        </option>
+                        <option value="0.005">Fujifilm FinePix F402
+                        </option>
+                        <option value="0.005">Fujifilm FinePix F440
+                        </option>
+                        <option value="0.005">Fujifilm FinePix F450
+                        </option>
+                        <option value="0.005">Fujifilm FinePix F455
+                        </option>
+                        <option value="0.005">Fujifilm FinePix F470
+                        </option>
+                        <option value="0.007">Fujifilm FinePix F510
+                        </option>
+                        <option value="0.007">Fujifilm FinePix F601
+                        </option>
+                        <option value="0.005">Fujifilm FinePix F650
+                        </option>
+                        <option value="0.007">Fujifilm FinePix F700
+                        </option>
+                        <option value="0.006">Fujifilm FinePix F710
+                        </option>
+                        <option value="0.007">Fujifilm FinePix F810
+                        </option>
+                        <option value="0.007">Fujifilm FinePix S602
+                        </option>
+                        <option value="0.005">Fujifilm FinePix 2600
+                        </option>
+                        <option value="0.005">Fujifilm FinePix 2650
+                        </option>
+                        <option value="0.005">Fujifilm FinePix 2800
+                        </option>
+                        <option value="0.005">Fujifilm FinePix 3800
+                        </option>
+                        <option value="0.007">Fujifilm FinePix 4800
+                        </option>
+                        <option value="0.007">Fujifilm FinePix 4900
+                        </option>
+                        <option value="0.005">Fujifilm FinePix S3000
+                        </option>
+                        <option value="0.005">Fujifilm FinePix S3100
+                        </option>
+                        <option value="0.005">Fujifilm FinePix S3500
+                        </option>
+                        <option value="0.005">Fujifilm FinePix S5000
+                        </option>
+                        <option value="0.005">Fujifilm FinePix S5200 / S5600
+                        </option>
+                        <option value="0.005">Fujifilm FinePix S5500 / S5100
+                        </option>
+                        <option value="0.007">Fujifilm FinePix 6800
+                        </option>
+                        <option value="0.007">Fujifilm FinePix 7000
+                        </option>
+                        <option value="0.007">Fujifilm FinePix S6500fd
+                        </option>
+                        <option value="0.007">Fujifilm FinePix S9000 / S9500
+                        </option>
+                        <option value="0.020">Fujifilm FinePix S1 Pro
+                        </option>
+                        <option value="0.020">Fujifilm FinePix S2 Pro
+                        </option>
+                        <option value="0.020">Fujifilm FinePix S3 Pro
+                        </option>
+                        <option value="0.020">Fujifilm FinePix S3 Pro UVIR
+                        </option>
+                        <option value="0.007">Fujifilm FinePix S20 Pro
+                        </option>
+                        <option value="0.005">Fujifilm FinePix V10
+                        </option>
+                        <option value="0.005">Fujifilm FinePix Z1
+                        </option>
+                        <option value="0.005">Fujifilm FinePix Z2
+                        </option>
+                        <option value="0.005">Fujifilm FinePix Z3
+                        </option>
+                        <option value="0.008">Hewlett Packard PhotoSmart 120
+                        </option>
+                        <option value="0.006">Hewlett Packard PhotoSmart 318
+                        </option>
+                        <option value="0.005">Hewlett Packard PhotoSmart 320
+                        </option>
+                        <option value="0.005">Hewlett Packard PhotoSmart 435
+                        </option>
+                        <option value="0.005">Hewlett Packard PhotoSmart 620
+                        </option>
+                        <option value="0.004">Hewlett Packard PhotoSmart 635
+                        </option>
+                        <option value="0.006">Hewlett Packard PhotoSmart 715
+                        </option>
+                        <option value="0.006">Hewlett Packard PhotoSmart 720
+                        </option>
+                        <option value="0.005">Hewlett Packard PhotoSmart 735
+                        </option>
+                        <option value="0.006">Hewlett Packard PhotoSmart 812
+                        </option>
+                        <option value="0.006">Hewlett Packard PhotoSmart 850
+                        </option>
+                        <option value="0.007">Hewlett Packard PhotoSmart 912
+                        </option>
+                        <option value="0.006">Hewlett Packard PhotoSmart 935
+                        </option>
+                        <option value="0.006">Hewlett Packard PhotoSmart 945
+                        </option>
+                        <option value="0.005">Hewlett Packard PhotoSmart C215
+                        </option>
+                        <option value="0.005">Hewlett Packard PhotoSmart M22
+                        </option>
+                        <option value="0.005">Hewlett Packard PhotoSmart M23
+                        </option>
+                        <option value="0.005">Hewlett Packard PhotoSmart M307
+                        </option>
+                        <option value="0.005">Hewlett Packard PhotoSmart M407
+                        </option>
+                        <option value="0.005">Hewlett Packard PhotoSmart M417
+                        </option>
+                        <option value="0.005">Hewlett Packard PhotoSmart M425
+                        </option>
+                        <option value="0.005">Hewlett Packard PhotoSmart M517
+                        </option>
+                        <option value="0.005">Hewlett Packard PhotoSmart M525
+                        </option>
+                        <option value="0.005">Hewlett Packard PhotoSmart M527
+                        </option>
+                        <option value="0.005">Hewlett Packard PhotoSmart R507
+                        </option>
+                        <option value="0.005">Hewlett Packard PhotoSmart R607
+                        </option>
+                        <option value="0.006">Hewlett Packard PhotoSmart R707
+                        </option>
+                        <option value="0.006">Hewlett Packard PhotoSmart R717
+                        </option>
+                        <option value="0.005">Hewlett Packard PhotoSmart R817
+                        </option>
+                        <option value="0.005">Hewlett Packard PhotoSmart R818
+                        </option>
+                        <option value="0.005">Kodak CX-7430
+                        </option>
+                        <option value="0.006">Kodak CX-6330
+                        </option>
+                        <option value="0.005">Kodak CX-7330
+                        </option>
+                        <option value="0.005">Kodak CX-7530
+                        </option>
+                        <option value="0.007">Kodak DC-5000
+                        </option>
+                        <option value="0.030">Kodak DCS-14N
+                        </option>
+                        <option value="0.019">Kodak DCS-720X
+                        </option>
+                        <option value="0.023">Kodak DCS-760
+                        </option>
+                        <option value="0.030">Kodak DCS Pro
+                        </option>
+                        <option value="0.006">Kodak DX-4530
+                        </option>
+                        <option value="0.005">Kodak DX-6440
+                        </option>
+                        <option value="0.005">Kodak DX-6490
+                        </option>
+                        <option value="0.005">Kodak DX-7440
+                        </option>
+                        <option value="0.005">Kodak DX-7590
+                        </option>
+                        <option value="0.007">Kodak DX-7630
+                        </option>
+                        <option value="0.005">Kodak LS-743
+                        </option>
+                        <option value="0.005">Kodak LS-753
+                        </option>
+                        <option value="0.004">Kodak PalmPix 100/500
+                        </option>
+                        <option value="0.005">Kodak Z730
+                        </option>
+                        <option value="0.006">Kodak Z760
+                        </option>
+                        <option value="0.005">Kodak Z7590
+                        </option>
+                        <option value="0.006">Konica KD-310Z
+                        </option>
+                        <option value="0.006">Konica KD-400
+                        </option>
+                        <option value="0.006">Konica KD-500
+                        </option>
+                        <option value="0.006">Konica Minolta Dimage 5
+                        </option>
+                        <option value="0.008">Konica Minolta Dimage 7
+                        </option>
+                        <option value="0.008">Konica Minolta Dimage 7i
+                        </option>
+                        <option value="0.008">Konica Minolta Dimage 7Hi
+                        </option>
+                        <option value="0.008">Konica Minolta Dimage A1
+                        </option>
+                        <option value="0.008">Konica Minolta Dimage A2
+                        </option>
+                        <option value="0.008">Konica Minolta Dimage A200
+                        </option>
+                        <option value="0.005">Konica Minolta Dimage E50
+                        </option>
+                        <option value="0.005">Konica Minolta Dimage E223
+                        </option>
+                        <option value="0.006">Konica Minolta Dimage F100
+                        </option>
+                        <option value="0.006">Konica Minolta Dimage F300
+                        </option>
+                        <option value="0.005">Konica Minolta Dimage G400
+                        </option>
+                        <option value="0.006">Konica Minolta Dimage G600
+                        </option>
+                        <option value="0.006">Konica Minolta Dimage S404
+                        </option>
+                        <option value="0.006">Konica Minolta Dimage S414
+                        </option>
+                        <option value="0.005">Konica Minolta Dimage X
+                        </option>
+                        <option value="0.005">Konica Minolta Dimage Xg
+                        </option>
+                        <option value="0.005">Konica Minolta Dimage Xi
+                        </option>
+                        <option value="0.005">Konica Minolta Dimage Xt
+                        </option>
+                        <option value="0.006">Konica Minolta Dimage X1
+                        </option>
+                        <option value="0.004">Konica Minolta Dimage X20
+                        </option>
+                        <option value="0.004">Konica Minolta Dimage X31
+                        </option>
+                        <option value="0.005">Konica Minolta Dimage X50
+                        </option>
+                        <option value="0.005">Konica Minolta Dimage X60
+                        </option>
+                        <option value="0.005">Konica Minolta Dimage Z1
+                        </option>
+                        <option value="0.005">Konica Minolta Dimage Z2
+                        </option>
+                        <option value="0.005">Konica Minolta Dimage Z3
+                        </option>
+                        <option value="0.005">Konica Minolta Dimage Z5
+                        </option>
+                        <option value="0.005">Konica Minolta Dimage Z6
+                        </option>
+                        <option value="0.005">Konica Minolta Dimage Z10
+                        </option>
+                        <option value="0.005">Konica Minolta Dimage Z20
+                        </option>
+                        <option value="0.020">Konica Minolta Maxxum 5D
+                        </option>
+                        <option value="0.020">Konica Minolta Maxxum 7D
+                        </option>
+                        <option value="0.005">Kyocera FineCam L4v
+                        </option>
+                        <option value="0.005">Kyocera FineCam M410R
+                        </option>
+                        <option value="0.006">Kyocera FineCam S3
+                        </option>
+                        <option value="0.006">Kyocera FineCam S3x
+                        </option>
+                        <option value="0.006">Kyocera FineCam S4
+                        </option>
+                        <option value="0.006">Kyocera FineCam S5
+                        </option>
+                        <option value="0.005">Kyocera FineCam SL300R
+                        </option>
+                        <option value="0.005">Kyocera FineCam SL400R
+                        </option>
+                        <option value="0.005">Leica C-Lux 1
+                        </option>
+                        <option value="0.006">Leica Digilux 1
+                        </option>
+                        <option value="0.008">Leica Digilux 2
+                        </option>
+                        <option value="0.005">Leica D-Lux
+                        </option>
+                        <option value="0.007">Leica D-Lux 2
+                        </option>
+                        <option value="0.039">Mamiya ZD
+                        </option>
+                        <option value="0.006">Microtek Take-it D1
+                        </option>
+                        <option value="0.006">Minolta Dimage 5
+                        </option>
+                        <option value="0.008">Minolta Dimage 7
+                        </option>
+                        <option value="0.008">Minolta Dimage 7i
+                        </option>
+                        <option value="0.008">Minolta Dimage 7Hi
+                        </option>
+                        <option value="0.008">Minolta Dimage A1
+                        </option>
+                        <option value="0.008">Minolta Dimage A2
+                        </option>
+                        <option value="0.005">Minolta Dimage E223
+                        </option>
+                        <option value="0.006">Minolta Dimage F100
+                        </option>
+                        <option value="0.006">Minolta Dimage F300
+                        </option>
+                        <option value="0.005">Minolta Dimage G400
+                        </option>
+                        <option value="0.006">Minolta Dimage G600
+                        </option>
+                        <option value="0.006">Minolta Dimage S404
+                        </option>
+                        <option value="0.006">Minolta Dimage S414
+                        </option>
+                        <option value="0.005">Minolta Dimage X
+                        </option>
+                        <option value="0.005">Minolta Dimage Xg
+                        </option>
+                        <option value="0.005">Minolta Dimage Xi
+                        </option>
+                        <option value="0.005">Minolta Dimage Xt
+                        </option>
+                        <option value="0.004">Minolta Dimage X20
+                        </option>
+                        <option value="0.005">Minolta Dimage X50
+                        </option>
+                        <option value="0.005">Minolta Dimage Z1
+                        </option>
+                        <option value="0.005">Minolta Dimage Z2
+                        </option>
+                        <option value="0.005">Nikon Coolpix 2000
+                        </option>
+                        <option value="0.004">Nikon Coolpix 2100
+                        </option>
+                        <option value="0.004">Nikon Coolpix 2200
+                        </option>
+                        <option value="0.005">Nikon Coolpix 2500
+                        </option>
+                        <option value="0.005">Nikon Coolpix 3100
+                        </option>
+                        <option value="0.005">Nikon Coolpix 3200
+                        </option>
+                        <option value="0.005">Nikon Coolpix 3500
+                        </option>
+                        <option value="0.005">Nikon Coolpix 3700
+                        </option>
+                        <option value="0.005">Nikon Coolpix 4100
+                        </option>
+                        <option value="0.006">Nikon Coolpix 4200
+                        </option>
+                        <option value="0.006">Nikon Coolpix 4300
+                        </option>
+                        <option value="0.006">Nikon Coolpix 4500
+                        </option>
+                        <option value="0.005">Nikon Coolpix 4600
+                        </option>
+                        <option value="0.005">Nikon Coolpix 4800
+                        </option>
+                        <option value="0.008">Nikon Coolpix 5000
+                        </option>
+                        <option value="0.006">Nikon Coolpix 5200
+                        </option>
+                        <option value="0.006">Nikon Coolpix 5400
+                        </option>
+                        <option value="0.005">Nikon Coolpix 5600
+                        </option>
+                        <option value="0.008">Nikon Coolpix 5700
+                        </option>
+                        <option value="0.006">Nikon Coolpix 5900
+                        </option>
+                        <option value="0.006">Nikon Coolpix 7600
+                        </option>
+                        <option value="0.006">Nikon Coolpix 7900
+                        </option>
+                        <option value="0.008">Nikon Coolpix 8400
+                        </option>
+                        <option value="0.008">Nikon Coolpix 8700
+                        </option>
+                        <option value="0.008">Nikon Coolpix 8800
+                        </option>
+                        <option value="0.007">Nikon Coolpix S9600 / S9100
+                        </option>
+                        <option value="0.005">Nikon Coolpix 775
+                        </option>
+                        <option value="0.006">Nikon Coolpix 885
+                        </option>
+                        <option value="0.006">Nikon Coolpix 995
+                        </option>
+                        <option value="0.005">Nikon Coolpix L1
+                        </option>
+                        <option value="0.005">Nikon Coolpix L2
+                        </option>
+                        <option value="0.005">Nikon Coolpix L3
+                        </option>
+                        <option value="0.005">Nikon Coolpix L4
+                        </option>
+                        <option value="0.005">Nikon Coolpix L5
+                        </option>
+                        <option value="0.005">Nikon Coolpix L6
+                        </option>
+                        <option value="0.006">Nikon Coolpix P1
+                        </option>
+                        <option value="0.006">Nikon Coolpix P2
+                        </option>
+                        <option value="0.006">Nikon Coolpix P3
+                        </option>
+                        <option value="0.006">Nikon Coolpix P4
+                        </option>
+                        <option value="0.005">Nikon Coolpix SQ
+                        </option>
+                        <option value="0.005">Nikon Coolpix S1
+                        </option>
+                        <option value="0.005">Nikon Coolpix S2
+                        </option>
+                        <option value="0.005">Nikon Coolpix S3
+                        </option>
+                        <option value="0.005">Nikon Coolpix S4
+                        </option>
+                        <option value="0.005">Nikon Coolpix S5
+                        </option>
+                        <option value="0.005">Nikon Coolpix S6
+                        </option>
+                        <option value="0.005">Nikon Coolpix S7c
+                        </option>
+                        <option value="0.005">Nikon Coolpix S9
+                        </option>
+                        <option value="0.005">Nikon Coolpix S10
+                        </option>
+                        <option value="0.020">Nikon D1H
+                        </option>
+                        <option value="0.020">Nikon D1X
+                        </option>
+                        <option value="0.020">Nikon D2H
+                        </option>
+                        <option value="0.020">Nikon D2Hs
+                        </option>
+                        <option value="0.020">Nikon D2X
+                        </option>
+                        <option value="0.020">Nikon D2Xs
+                        </option>
+                        <option value="0.020">Nikon D50
+                        </option>
+                        <option value="0.020">Nikon D70
+                        </option>
+                        <option value="0.020">Nikon D70s
+                        </option>
+                        <option value="0.020">Nikon D80
+                        </option>
+                        <option value="0.020">Nikon D100
+                        </option>
+                        <option value="0.020">Nikon D200
+                        </option>
+                        <option value="0.005">Olympus AZ-1
+                        </option>
+                        <option value="0.005">Olympus Brio D-230
+                        </option>
+                        <option value="0.004">Olympus C-160
+                        </option>
+                        <option value="0.008">Olympus C-2500L
+                        </option>
+                        <option value="0.006">Olympus C-3020
+                        </option>
+                        <option value="0.006">Olympus C-3040
+                        </option>
+                        <option value="0.005">Olympus C-460 ZOOM del Sol
+                        </option>
+                        <option value="0.006">Olympus C-4000
+                        </option>
+                        <option value="0.006">Olympus C-4040Z
+                        </option>
+                        <option value="0.006">Olympus C-50
+                        </option>
+                        <option value="0.006">Olympus C-55 / C-5500
+                        </option>
+                        <option value="0.006">Olympus C-60
+                        </option>
+                        <option value="0.006">Olympus C-70 / C-7000
+                        </option>
+                        <option value="0.005">Olympus C-500
+                        </option>
+                        <option value="0.006">Olympus C-5000
+                        </option>
+                        <option value="0.006">Olympus C-5050
+                        </option>
+                        <option value="0.006">Olympus C-5060
+                        </option>
+                        <option value="0.006">Olympus C-5500
+                        </option>
+                        <option value="0.005">Olympus C-700 ZU
+                        </option>
+                        <option value="0.006">Olympus C-7070
+                        </option>
+                        <option value="0.006">Olympus C-7000
+                        </option>
+                        <option value="0.005">Olympus C-730 CZ
+                        </option>
+                        <option value="0.005">Olympus C-720
+                        </option>
+                        <option value="0.005">Olympus C-730
+                        </option>
+                        <option value="0.005">Olympus C-740
+                        </option>
+                        <option value="0.005">Olympus C-750
+                        </option>
+                        <option value="0.005">Olympus C-765
+                        </option>
+                        <option value="0.005">Olympus C-770
+                        </option>
+                        <option value="0.008">Olympus C-8080
+                        </option>
+                        <option value="0.006">Olympus D-40
+                        </option>
+                        <option value="0.004">Olympus D-100 Brio
+                        </option>
+                        <option value="0.004">Olympus D-150 Brio
+                        </option>
+                        <option value="0.004">Olympus D-370
+                        </option>
+                        <option value="0.004">Olympus D-380
+                        </option>
+                        <option value="0.004">Olympus D-390
+                        </option>
+                        <option value="0.005">Olympus D-395
+                        </option>
+                        <option value="0.005">Olympus D-425
+                        </option>
+                        <option value="0.005">Olympus D-435
+                        </option>
+                        <option value="0.005">Olympus D-510
+                        </option>
+                        <option value="0.004">Olympus D-520
+                        </option>
+                        <option value="0.005">Olympus D-535 / C-370
+                        </option>
+                        <option value="0.005">Olympus D-540
+                        </option>
+                        <option value="0.005">Olympus D-545
+                        </option>
+                        <option value="0.005">Olympus D-550
+                        </option>
+                        <option value="0.005">Olympus D-560
+                        </option>
+                        <option value="0.005">Olympus D-580
+                        </option>
+                        <option value="0.005">Olympus D-590
+                        </option>
+                        <option value="0.005">Olympus D-595
+                        </option>
+                        <option value="0.005">Olympus D-630
+                        </option>
+                        <option value="0.015">Olympus E-1
+                        </option>
+                        <option value="0.008">Olympus E-10
+                        </option>
+                        <option value="0.006">Olympus E-100 RS
+                        </option>
+                        <option value="0.008">Olympus E-20
+                        </option>
+                        <option value="0.015">Olympus E-300
+                        </option>
+                        <option value="0.015">Olympus E-330
+                        </option>
+                        <option value="0.015">Olympus E-500
+                        </option>
+                        <option value="0.005">Olympus Ferrari MODEL 2004
+                        </option>
+                        <option value="0.005">Olympus FE-100
+                        </option>
+                        <option value="0.005">Olympus FE-110
+                        </option>
+                        <option value="0.005">Olympus FE-115
+                        </option>
+                        <option value="0.005">Olympus FE-120
+                        </option>
+                        <option value="0.005">Olympus FE-130
+                        </option>
+                        <option value="0.005">Olympus FE-140
+                        </option>
+                        <option value="0.005">Olympus FE-150
+                        </option>
+                        <option value="0.005">Olympus FE-170
+                        </option>
+                        <option value="0.005">Olympus FE-180
+                        </option>
+                        <option value="0.005">Olympus FE-200
+                        </option>
+                        <option value="0.005">Olympus FE-5500
+                        </option>
+                        <option value="0.005">Olympus ImageLink
+                        </option>
+                        <option value="0.005">Olympus IR-300
+                        </option>
+                        <option value="0.005">Olympus IR-500
+                        </option>
+                        <option value="0.006">Olympus SP-310
+                        </option>
+                        <option value="0.006">Olympus SP-320
+                        </option>
+                        <option value="0.006">Olympus SP-350
+                        </option>
+                        <option value="0.005">Olympus SP-500 UZ
+                        </option>
+                        <option value="0.005">Olympus SP-510 UZ
+                        </option>
+                        <option value="0.005">Olympus SP-700
+                        </option>
+                        <option value="0.005">Olympus Stylus 300
+                        </option>
+                        <option value="0.005">Olympus Stylus 410
+                        </option>
+                        <option value="0.005">Olympus Stylus 500
+                        </option>
+                        <option value="0.005">Olympus Stylus 600
+                        </option>
+                        <option value="0.005">Olympus Stylus 700
+                        </option>
+                        <option value="0.005">Olympus Stylus 720 SW
+                        </option>
+                        <option value="0.005">Olympus Stylus 725 SW
+                        </option>
+                        <option value="0.005">Olympus Stylus 730
+                        </option>
+                        <option value="0.005">Olympus Stylus 740
+                        </option>
+                        <option value="0.005">Olympus Stylus 750
+                        </option>
+                        <option value="0.006">Olympus Stylus 800
+                        </option>
+                        <option value="0.006">Olympus Stylus 810
+                        </option>
+                        <option value="0.006">Olympus Stylus 1000
+                        </option>
+                        <option value="0.005">Olympus Stylus Verve
+                        </option>
+                        <option value="0.005">Olympus Stylus Verve s
+                        </option>
+                        <option value="0.005">Panasonic Lumix DMC-F7
+                        </option>
+                        <option value="0.005">Panasonic Lumix DMC-FX01
+                        </option>
+                        <option value="0.005">Panasonic Lumix DMC-FX07
+                        </option>
+                        <option value="0.005">Panasonic Lumix DMC-FX2
+                        </option>
+                        <option value="0.005">Panasonic Lumix DMC-FX3
+                        </option>
+                        <option value="0.005">Panasonic Lumix DMC-FX7
+                        </option>
+                        <option value="0.005">Panasonic Lumix DMC-FX8
+                        </option>
+                        <option value="0.005">Panasonic Lumix DMC-FX9
+                        </option>
+                        <option value="0.005">Panasonic Lumix DMC-FX50
+                        </option>
+                        <option value="0.004">Panasonic Lumix DMC-FZ1
+                        </option>
+                        <option value="0.004">Panasonic Lumix DMC-FZ3
+                        </option>
+                        <option value="0.005">Panasonic Lumix DMC-FZ4
+                        </option>
+                        <option value="0.005">Panasonic Lumix DMC-FZ5
+                        </option>
+                        <option value="0.005">Panasonic Lumix DMC-FZ7
+                        </option>
+                        <option value="0.005">Panasonic Lumix DMC-FZ10
+                        </option>
+                        <option value="0.005">Panasonic Lumix DMC-FZ20
+                        </option>
+                        <option value="0.006">Panasonic Lumix DMC-FZ30
+                        </option>
+                        <option value="0.006">Panasonic Lumix DMC-FZ50
+                        </option>
+                        <option value="0.015">Panasonic Lumix DMC-L1
+                        </option>
+                        <option value="0.008">Panasonic Lumix DMC-LC1
+                        </option>
+                        <option value="0.004">Panasonic Lumix DMC-LC20
+                        </option>
+                        <option value="0.006">Panasonic Lumix DMC-LC40
+                        </option>
+                        <option value="0.006">Panasonic Lumix DMC-LC5
+                        </option>
+                        <option value="0.005">Panasonic Lumix DMC-LC50
+                        </option>
+                        <option value="0.005">Panasonic Lumix DMC-LC70
+                        </option>
+                        <option value="0.005">Panasonic Lumix DMC-LC80
+                        </option>
+                        <option value="0.005">Panasonic Lumix DMC-LS1
+                        </option>
+                        <option value="0.005">Panasonic Lumix DMC-LS2
+                        </option>
+                        <option value="0.007">Panasonic Lumix DMC-LX1
+                        </option>
+                        <option value="0.007">Panasonic Lumix DMC-LX2
+                        </option>
+                        <option value="0.005">Panasonic Lumix DMC-LZ1
+                        </option>
+                        <option value="0.005">Panasonic Lumix DMC-LZ2
+                        </option>
+                        <option value="0.005">Panasonic Lumix DMC-LZ3
+                        </option>
+                        <option value="0.005">Panasonic Lumix DMC-LZ5
+                        </option>
+                        <option value="0.004">Panasonic Lumix DMC-TZ1
+                        </option>
+                        <option value="0.004">Pentax EI-100
+                        </option>
+                        <option value="0.005">Pentax Optio 30
+                        </option>
+                        <option value="0.005">Pentax Optio 33WR
+                        </option>
+                        <option value="0.005">Pentax Optio 43WR
+                        </option>
+                        <option value="0.005">Pentax Optio 33LF
+                        </option>
+                        <option value="0.005">Pentax Optio 50
+                        </option>
+                        <option value="0.006">Pentax Optio 60
+                        </option>
+                        <option value="0.005">Pentax Optio 230
+                        </option>
+                        <option value="0.006">Pentax Optio 330
+                        </option>
+                        <option value="0.005">Pentax Optio 330GS
+                        </option>
+                        <option value="0.006">Pentax Optio 430
+                        </option>
+                        <option value="0.006">Pentax Optio 430 RS
+                        </option>
+                        <option value="0.006">Pentax Optio 450
+                        </option>
+                        <option value="0.006">Pentax Optio 550
+                        </option>
+                        <option value="0.006">Pentax Optio 555
+                        </option>
+                        <option value="0.006">Pentax Optio 750Z
+                        </option>
+                        <option value="0.006">Pentax Optio A10
+                        </option>
+                        <option value="0.006">Pentax Optio A20
+                        </option>
+                        <option value="0.005">Pentax Optio E10
+                        </option>
+                        <option value="0.005">Pentax Optio MX4
+                        </option>
+                        <option value="0.005">Pentax Optio M10
+                        </option>
+                        <option value="0.005">Pentax Optio M20
+                        </option>
+                        <option value="0.005">Pentax Optio S
+                        </option>
+                        <option value="0.005">Pentax Optio S4i
+                        </option>
+                        <option value="0.005">Pentax Optio S5i
+                        </option>
+                        <option value="0.005">Pentax Optio S5n
+                        </option>
+                        <option value="0.005">Pentax Optio S5z
+                        </option>
+                        <option value="0.005">Pentax Optio S6
+                        </option>
+                        <option value="0.005">Pentax Optio S7
+                        </option>
+                        <option value="0.005">Pentax Optio S30
+                        </option>
+                        <option value="0.005">Pentax Optio S40
+                        </option>
+                        <option value="0.005">Pentax Optio S45
+                        </option>
+                        <option value="0.005">Pentax Optio S50
+                        </option>
+                        <option value="0.005">Pentax Optio S55
+                        </option>
+                        <option value="0.005">Pentax Optio S60
+                        </option>
+                        <option value="0.005">Pentax Optio SV
+                        </option>
+                        <option value="0.005">Pentax Optio SVi
+                        </option>
+                        <option value="0.005">Pentax Optio T10
+                        </option>
+                        <option value="0.005">Pentax Optio X
+                        </option>
+                        <option value="0.005">Pentax Optio W10
+                        </option>
+                        <option value="0.005">Pentax Optio W20
+                        </option>
+                        <option value="0.005">Pentax Optio WP
+                        </option>
+                        <option value="0.005">Pentax Optio WPi
+                        </option>
+                        <option value="0.020">Pentax *ist D
+                        </option>
+                        <option value="0.020">Pentax *ist DL
+                        </option>
+                        <option value="0.020">Pentax *ist DL2
+                        </option>
+                        <option value="0.020">Pentax *ist DS
+                        </option>
+                        <option value="0.020">Pentax *ist DS2
+                        </option>
+                        <option value="0.020">Pentax K100D
+                        </option>
+                        <option value="0.020">Pentax K110D
+                        </option>
+                        <option value="0.006">Ricoh Caplio 500G wide
+                        </option>
+                        <option value="0.005">Ricoh Caplio RX
+                        </option>
+                        <option value="0.005">Ricoh Caplio R2
+                        </option>
+                        <option value="0.005">Ricoh Caplio R3
+                        </option>
+                        <option value="0.005">Ricoh Caplio R4
+                        </option>
+                        <option value="0.005">Ricoh Caplio R5
+                        </option>
+                        <option value="0.005">Ricoh Caplio R30
+                        </option>
+                        <option value="0.005">Ricoh Caplio R40
+                        </option>
+                        <option value="0.005">Ricoh Caplio RR530
+                        </option>
+                        <option value="0.006">Ricoh Caplio GX
+                        </option>
+                        <option value="0.006">Ricoh Caplio GX8
+                        </option>
+                        <option value="0.006">Ricoh GR
+                        </option>
+                        <option value="0.005">Samsung Digimax 230
+                        </option>
+                        <option value="0.006">Samsung Digimax 410
+                        </option>
+                        <option value="0.004">Samsung Digimax 240
+                        </option>
+                        <option value="0.005">Samsung Digimax A4
+                        </option>
+                        <option value="0.006">Samsung Digimax A5
+                        </option>
+                        <option value="0.006">Samsung Digimax A6
+                        </option>
+                        <option value="0.006">Samsung Digimax A7
+                        </option>
+                        <option value="0.005">Samsung Digimax A40
+                        </option>
+                        <option value="0.004">Samsung Digimax A50
+                        </option>
+                        <option value="0.005">Samsung Digimax A55W
+                        </option>
+                        <option value="0.005">Samsung Digimax A400
+                        </option>
+                        <option value="0.005">Samsung Digimax A302
+                        </option>
+                        <option value="0.005">Samsung Digimax A402
+                        </option>
+                        <option value="0.005">Samsung Digimax A502
+                        </option>
+                        <option value="0.005">Samsung Digimax i5
+                        </option>
+                        <option value="0.005">Samsung Digimax i50 MP3
+                        </option>
+                        <option value="0.005">Samsung Digimax L50
+                        </option>
+                        <option value="0.005">Samsung Digimax L60
+                        </option>
+                        <option value="0.005">Samsung Digimax L55W
+                        </option>
+                        <option value="0.005">Samsung Digimax U-CA 4
+                        </option>
+                        <option value="0.005">Samsung Digimax U-CA 5
+                        </option>
+                        <option value="0.006">Samsung Digimax V3
+                        </option>
+                        <option value="0.006">Samsung Digimax V4
+                        </option>
+                        <option value="0.006">Samsung Digimax V6
+                        </option>
+                        <option value="0.006">Samsung Digimax V50
+                        </option>
+                        <option value="0.006">Samsung Digimax V70
+                        </option>
+                        <option value="0.006">Samsung Digimax V700
+                        </option>
+                        <option value="0.006">Samsung Digimax V800
+                        </option>
+                        <option value="0.020">Samsung GX-1L
+                        </option>
+                        <option value="0.020">Samsung GX-1S
+                        </option>
+                        <option value="0.006">Samsung NV3
+                        </option>
+                        <option value="0.005">Samsung NV7 OPS
+                        </option>
+                        <option value="0.006">Samsung NV10
+                        </option>
+                        <option value="0.008">Samsung PRO815
+                        </option>
+                        <option value="0.005">Sanyo Xacti DSC-S1
+                        </option>
+                        <option value="0.005">Sanyo Xacti DSC-S3
+                        </option>
+                        <option value="0.005">Sanyo Xacti DSC-S4
+                        </option>
+                        <option value="0.005">Sanyo Xacti J4
+                        </option>
+                        <option value="0.006">Sanyo VPC-AZ3
+                        </option>
+                        <option value="0.005">Sanyo VPC-J1
+                        </option>
+                        <option value="0.018">Sigma SD-9
+                        </option>
+                        <option value="0.018">Sigma SD-10
+                        </option>
+                        <option value="0.020">Sony Alpha DSLR-A100
+                        </option>
+                        <option value="0.005">Sony Cyber Shot DSC-F88
+                        </option>
+                        <option value="0.008">Sony Cyber Shot DSC-F707
+                        </option>
+                        <option value="0.008">Sony Cyber Shot DSC-F717
+                        </option>
+                        <option value="0.008">Sony Cyber Shot DSC-F828
+                        </option>
+                        <option value="0.005">Sony Cyber Shot DSC-H1
+                        </option>
+                        <option value="0.005">Sony Cyber Shot DSC-H2
+                        </option>
+                        <option value="0.005">Sony Cyber Shot DSC-H5
+                        </option>
+                        <option value="0.005">Sony Cyber Shot DSC-L1
+                        </option>
+                        <option value="0.005">Sony Cyber Shot DSC-M1
+                        </option>
+                        <option value="0.005">Sony Cyber Shot DSC-M2
+                        </option>
+                        <option value="0.006">Sony Cyber Shot DSC-N1
+                        </option>
+                        <option value="0.005">Sony Cyber Shot DSC-P2
+                        </option>
+                        <option value="0.006">Sony Cyber Shot DSC-P3
+                        </option>
+                        <option value="0.005">Sony Cyber Shot DSC-P30
+                        </option>
+                        <option value="0.005">Sony Cyber Shot DSC-P31
+                        </option>
+                        <option value="0.005">Sony Cyber Shot DSC-P32
+                        </option>
+                        <option value="0.005">Sony Cyber Shot DSC-P41
+                        </option>
+                        <option value="0.006">Sony Cyber Shot DSC-P5
+                        </option>
+                        <option value="0.006">Sony Cyber Shot DSC-P7
+                        </option>
+                        <option value="0.005">Sony Cyber Shot DSC-P8
+                        </option>
+                        <option value="0.006">Sony Cyber Shot DSC-P9
+                        </option>
+                        <option value="0.006">Sony Cyber Shot DSC-P10
+                        </option>
+                        <option value="0.005">Sony Cyber Shot DSC-P50
+                        </option>
+                        <option value="0.005">Sony Cyber Shot DSC-P51
+                        </option>
+                        <option value="0.005">Sony Cyber Shot DSC-P52
+                        </option>
+                        <option value="0.006">Sony Cyber Shot DSC-P71
+                        </option>
+                        <option value="0.005">Sony Cyber Shot DSC-P72
+                        </option>
+                        <option value="0.006">Sony Cyber Shot DSC-P73
+                        </option>
+                        <option value="0.005">Sony Cyber Shot DSC-P92
+                        </option>
+                        <option value="0.006">Sony Cyber Shot DSC-P93
+                        </option>
+                        <option value="0.006">Sony Cyber Shot DSC-P100
+                        </option>
+                        <option value="0.006">Sony Cyber Shot DSC-P120
+                        </option>
+                        <option value="0.006">Sony Cyber Shot DSC-P150
+                        </option>
+                        <option value="0.006">Sony Cyber Shot DSC-P200
+                        </option>
+                        <option value="0.018">Sony Cyber Shot DSC-R1
+                        </option>
+                        <option value="0.005">Sony Cyber Shot DSC-S40
+                        </option>
+                        <option value="0.005">Sony Cyber Shot DSC-S60
+                        </option>
+                        <option value="0.006">Sony Cyber Shot DSC-S75
+                        </option>
+                        <option value="0.006">Sony Cyber Shot DSC-S85
+                        </option>
+                        <option value="0.005">Sony Cyber Shot DSC-S90
+                        </option>
+                        <option value="0.005">Sony Cyber Shot DSC-S600
+                        </option>
+                        <option value="0.005">Sony Cyber Shot DSC-T1
+                        </option>
+                        <option value="0.005">Sony Cyber Shot DSC-T3
+                        </option>
+                        <option value="0.005">Sony Cyber Shot DSC-T5
+                        </option>
+                        <option value="0.005">Sony Cyber Shot DSC-T7
+                        </option>
+                        <option value="0.005">Sony Cyber Shot DSC-T9
+                        </option>
+                        <option value="0.005">Sony Cyber Shot DSC-T10
+                        </option>
+                        <option value="0.005">Sony Cyber Shot DSC-T11
+                        </option>
+                        <option value="0.005">Sony Cyber Shot DSC-T30
+                        </option>
+                        <option value="0.005">Sony Cyber Shot DSC-T33
+                        </option>
+                        <option value="0.005">Sony Cyber Shot DSC-U20
+                        </option>
+                        <option value="0.005">Sony Cyber Shot DSC-U40
+                        </option>
+                        <option value="0.005">Sony Cyber Shot DSC-U60
+                        </option>
+                        <option value="0.006">Sony Cyber Shot DSC-V1
+                        </option>
+                        <option value="0.006">Sony Cyber Shot DSC-V3
+                        </option>
+                        <option value="0.006">Sony Cyber Shot DSC-W1
+                        </option>
+                        <option value="0.006">Sony Cyber Shot DSC-W5
+                        </option>
+                        <option value="0.006">Sony Cyber Shot DSC-W7
+                        </option>
+                        <option value="0.005">Sony Cyber Shot DSC-W30
+                        </option>
+                        <option value="0.005">Sony Cyber Shot DSC-W50
+                        </option>
+                        <option value="0.005">Sony Cyber Shot DSC-W70
+                        </option>
+                        <option value="0.006">Sony Cyber Shot DSC-W100
+                        </option>
+                        <option value="0.005">Sony Mavica MVC-CD200
+                        </option>
+                        <option value="0.005">Sony Mavica MVC-CD250
+                        </option>
+                        <option value="0.006">Sony Mavica MVC-CD300
+                        </option>
+                        <option value="0.005">Sony Mavica MVC-CD350
+                        </option>
+                        <option value="0.006">Sony Mavica MVC-CD400
+                        </option>
+                        <option value="0.006">Sony Mavica MVC-CD500
+                        </option>
+                        <option value="0.005">Sony Mavica MVC-FD100
+                        </option>
+                        <option value="0.005">Sony Mavica MVC-FD200
+                        </option>
+                        <option value="0.006">Vivitar Vivicam 3330
+                        </option>
+                        <option value="0.006">Viewpoint Photography
+                            <!-- end camera coc table -->
+                        </option>
+                        <option value="0.001"> CoC = 0.001 mm
+                        </option>
+                        <option value="0.002"> CoC = 0.002 mm
+                        </option>
+                        <option value="0.003"> CoC = 0.003 mm
+                        </option>
+                        <option value="0.004"> CoC = 0.004 mm
+                        </option>
+                        <option value="0.005"> CoC = 0.005 mm
+                        </option>
+                        <option value="0.006"> CoC = 0.006 mm
+                        </option>
+                        <option value="0.007"> CoC = 0.007 mm
+                        </option>
+                        <option value="0.008"> CoC = 0.008 mm
+                        </option>
+                        <option value="0.009"> CoC = 0.009 mm
+                        </option>
+                        <option value="0.010"> CoC = 0.010 mm
+                        </option>
+                        <option value="0.011"> CoC = 0.011 mm
+                        </option>
+                        <option value="0.012"> CoC = 0.012 mm
+                        </option>
+                        <option value="0.013"> CoC = 0.013 mm
+                        </option>
+                        <option value="0.014"> CoC = 0.014 mm
+                        </option>
+                        <option value="0.015"> CoC = 0.015 mm
+                        </option>
+                        <option value="0.016"> CoC = 0.016 mm
+                        </option>
+                        <option value="0.017"> CoC = 0.017 mm
+                        </option>
+                        <option value="0.018"> CoC = 0.018 mm
+                        </option>
+                        <option value="0.019"> CoC = 0.019 mm
+                        </option>
+                        <option value="0.020"> CoC = 0.020 mm
+                        </option>
+                        <option value="0.021"> CoC = 0.021 mm
+                        </option>
+                        <option value="0.022"> CoC = 0.022 mm
+                        </option>
+                        <option value="0.023"> CoC = 0.023 mm
+                        </option>
+                        <option value="0.024"> CoC = 0.024 mm
+                        </option>
+                        <option value="0.025"> CoC = 0.025 mm
+                        </option>
+                        <option value="0.026"> CoC = 0.026 mm
+                        </option>
+                        <option value="0.027"> CoC = 0.027 mm
+                        </option>
+                        <option value="0.028"> CoC = 0.028 mm
+                        </option>
+                        <option value="0.029"> CoC = 0.029 mm
+                        </option>
+                        <option value="0.030"> CoC = 0.030 mm
+                        </option>
+                        <option value="0.031"> CoC = 0.031 mm
+                        </option>
+                        <option value="0.032"> CoC = 0.032 mm
+                        </option>
+                        <option value="0.033"> CoC = 0.033 mm
+                        </option>
+                        <option value="0.034"> CoC = 0.034 mm
+                        </option>
+                        <option value="0.035"> CoC = 0.035 mm
+                        </option>
+                        <option value="0.036"> CoC = 0.036 mm
+                        </option>
+                        <option value="0.037"> CoC = 0.037 mm
+                        </option>
+                        <option value="0.038"> CoC = 0.038 mm
+                        </option>
+                        <option value="0.039"> CoC = 0.039 mm
+                        </option>
+                        <option value="0.040"> CoC = 0.040 mm
+                        </option>
+                        <option value="0.045"> CoC = 0.045 mm
+                        </option>
+                        <option value="0.050"> CoC = 0.050 mm
+                        </option>
+                        <option value="0.055"> CoC = 0.055 mm
+                        </option>
+                        <option value="0.060"> CoC = 0.060 mm
+                        </option>
+                        <option value="0.065"> CoC = 0.065 mm
+                        </option>
+                        <option value="0.070"> CoC = 0.070 mm
+                        </option>
+                        <option value="0.075"> CoC = 0.075 mm
+                        </option>
+                        <option value="0.080"> CoC = 0.080 mm
+                        </option>
+                        <option value="0.085"> CoC = 0.085 mm
+                        </option>
+                        <option value="0.090"> CoC = 0.090 mm
+                        </option>
+                        <option value="0.095"> CoC = 0.095 mm
+                        </option>
+                        <option value="0.100"> CoC = 0.100 mm
+                        </option>
+                        <option value="0.105"> CoC = 0.105 mm
+                        </option>
+                        <option value="0.110"> CoC = 0.110 mm
+                        </option>
+                        <option value="0.115"> CoC = 0.115 mm
+                        </option>
+                        <option value="0.120"> CoC = 0.120 mm
+                        </option>
+                        <option value="0.125"> CoC = 0.125 mm
+                        </option>
+                        <option value="0.130"> CoC = 0.130 mm
+                        </option>
+                        <option value="0.135"> CoC = 0.135 mm
+                        </option>
+                        <option value="0.140"> CoC = 0.140 mm
+                        </option>
+                        <option value="0.145"> CoC = 0.145 mm
+                        </option>
+                        <option value="0.150"> CoC = 0.150 mm
+                        </option>
+                        <option value="0.175"> CoC = 0.175 mm
+                        </option>
+                        <option value="0.200"> CoC = 0.200 mm
+                        </option>
+                        <option value="0.225"> CoC = 0.225 mm
+                        </option>
+                        <option value="0.250"> CoC = 0.250 mm
+                        </option>
+                        <option value="0.275"> CoC = 0.275 mm
+                        </option>
+                        <option value="0.300">CoC = 0.300 mm </option>
+                    </select>
+                      <label for="focal">Focal:</label>
+                    <select apple-style-relative="height: 18px;" id="focal" onchange="miGestorChange(event)">
+                        <option id="text7">3</option>
+                        <option value="3.6"> 3.6
+                        </option>
+                        <option value="4"> 4
+                        </option>
+                        <option value="4.3"> 4.3
+                        </option>
+                        <option value="4.5"> 4.5
+                        </option>
+                        <option value="4.6"> 4.6
+                        </option>
+                        <option value="4.7"> 4.7
+                        </option>
+                        <option value="4.75"> 4.75
+                        </option>
+                        <option value="4.8"> 4.8
+                        </option>
+                        <option value="5.0"> 5
+                        </option>
+                        <option value="5.1"> 5.1
+                        </option>
+                        <option value="5.2"> 5.2
+                        </option>
+                        <option value="5.3"> 5.3
+                        </option>
+                        <option value="5.4"> 5.4
+                        </option>
+                        <option value="5.5"> 5.5
+                        </option>
+                        <option value="5.6"> 5.6
+                        </option>
+                        <option value="5.7"> 5.7
+                        </option>
+                        <option value="5.8"> 5.8
+                        </option>
+                        <option value="5.83"> 5.83
+                        </option>
+                        <option value="5.9"> 5.9
+                        </option>
+                        <option value="6.0"> 6
+                        </option>
+                        <option value="6.1"> 6.1
+                        </option>
+                        <option value="6.11"> 6.11
+                        </option>
+                        <option value="6.2"> 6.2
+                        </option>
+                        <option value="6.3"> 6.3
+                        </option>
+                        <option value="6.32"> 6.32
+                        </option>
+                        <option value="6.33"> 6.33
+                        </option>
+                        <option value="6.4"> 6.4
+                        </option>
+                        <option value="6.5"> 6.5
+                        </option>
+                        <option value="6.6"> 6.6
+                        </option>
+                        <option value="6.7"> 6.7
+                        </option>
+                        <option value="6.8"> 6.8
+                        </option>
+                        <option value="6.9"> 6.9
+                        </option>
+                        <option value="7.0"> 7
+                        </option>
+                        <option value="7.1"> 7.1
+                        </option>
+                        <option value="7.15"> 7.15
+                        </option>
+                        <option value="7.2"> 7.2
+                        </option>
+                        <option value="7.25"> 7.25
+                        </option>
+                        <option value="7.3"> 7.3
+                        </option>
+                        <option value="7.4"> 7.4
+                        </option>
+                        <option value="7.5"> 7.5
+                        </option>
+                        <option value="7.51"> 7.51
+                        </option>
+                        <option value="7.6"> 7.6
+                        </option>
+                        <option value="7.7"> 7.7
+                        </option>
+                        <option value="7.8"> 7.8
+                        </option>
+                        <option value="7.85"> 7.85
+                        </option>
+                        <option value="7.9"> 7.9
+                        </option>
+                        <option value="8.0"> 8
+                        </option>
+                        <option value="8.2"> 8.2
+                        </option>
+                        <option value="8.3"> 8.3
+                        </option>
+                        <option value="8.5"> 8.5
+                        </option>
+                        <option value="8.9"> 8.9
+                        </option>
+                        <option value="9.0"> 9
+                        </option>
+                        <option value="9.2"> 9.2
+                        </option>
+                        <option value="9.7"> 9.7
+                        </option>
+                        <option value="9.9"> 9.9
+                        </option>
+                        <option value="10.0"> 10
+                        </option>
+                        <option value="10.5"> 10.5
+                        </option>
+                        <option value="10.8"> 10.8
+                        </option>
+                        <option value="11.0"> 11
+                        </option>
+                        <option value="11.6"> 11.6
+                        </option>
+                        <option value="12.0"> 12
+                        </option>
+                        <option value="12.5"> 12.5
+                        </option>
+                        <option value="12.6"> 12.6
+                        </option>
+                        <option value="13.0"> 13
+                        </option>
+                        <option value="13.2"> 13.2
+                        </option>
+                        <option value="13.5"> 13.5
+                        </option>
+                        <option value="14.0"> 14
+                        </option>
+                        <option value="14.1"> 14.1
+                        </option>
+                        <option value="14.3"> 14.3
+                        </option>
+                        <option value="14.4"> 14.4
+                        </option>
+                        <option value="14.9"> 14.9
+                        </option>
+                        <option value="15.0"> 15
+                        </option>
+                        <option value="15.1"> 15.1
+                        </option>
+                        <option value="15.3"> 15.3
+                        </option>
+                        <option value="15.5"> 15.5
+                        </option>
+                        <option value="15.6"> 15.6
+                        </option>
+                        <option value="16.0"> 16
+                        </option>
+                        <option value="16.2"> 16.2
+                        </option>
+                        <option value="16.5"> 16.5
+                        </option>
+                        <option value="16.6"> 16.6
+                        </option>
+                        <option value="16.8"> 16.8
+                        </option>
+                        <option value="17.0"> 17
+                        </option>
+                        <option value="17.1"> 17.1
+                        </option>
+                        <option value="17.3"> 17.3
+                        </option>
+                        <option value="17.4"> 17.4
+                        </option>
+                        <option value="18.0"> 18
+                        </option>
+                        <option value="18.3"> 18.3
+                        </option>
+                        <option value="18.6"> 18.6
+                        </option>
+                        <option value="18.9"> 18.9
+                        </option>
+                        <option value="19.0"> 19
+                        </option>
+                        <option value="19.2"> 19.2
+                        </option>
+                        <option value="19.5"> 19.5
+                        </option>
+                        <option value="19.8"> 19.8
+                        </option>
+                        <option value="20.0"> 20
+                        </option>
+                        <option value="20.1"> 20.1
+                        </option>
+                        <option value="20.3"> 20.3
+                        </option>
+                        <option value="20.7"> 20.7
+                        </option>
+                        <option value="21.0"> 21
+                        </option>
+                        <option value="21.3"> 21.3
+                        </option>
+                        <option value="21.4"> 21.4
+                        </option>
+                        <option value="21.6"> 21.6
+                        </option>
+                        <option value="21.8"> 21.8
+                        </option>
+                        <option value="21.9"> 21.9
+                        </option>
+                        <option value="22.0"> 22
+                        </option>
+                        <option value="22.2"> 22.2
+                        </option>
+                        <option value="22.5"> 22.5
+                        </option>
+                        <option value="22.8"> 22.8
+                        </option>
+                        <option value="22.9"> 22.9
+                        </option>
+                        <option value="23.0"> 23
+                        </option>
+                        <option value="23.1"> 23.1
+                        </option>
+                        <option value="23.2"> 23.2
+                        </option>
+                        <option value="23.4"> 23.4
+                        </option>
+                        <option value="23.5"> 23.5
+                        </option>
+                        <option value="23.7"> 23.7
+                        </option>
+                        <option value="24.0"> 24
+                        </option>
+                        <option value="24.3"> 24.3
+                        </option>
+                        <option value="24.9"> 24.9
+                        </option>
+                        <option value="25.0"> 25
+                        </option>
+                        <option value="25.2"> 25.2
+                        </option>
+                        <option value="25.8"> 25.8
+                        </option>
+                        <option value="26.0"> 26
+                        </option>
+                        <option value="26.3"> 26.3
+                        </option>
+                        <option value="26.4"> 26.4
+                        </option>
+                        <option value="27.0"> 27
+                        </option>
+                        <option value="28.0"> 28
+                        </option>
+                        <option value="28.46"> 28.4
+                        </option>
+                        <option value="28.6"> 28.6
+                        </option>
+                        <option value="28.8"> 28.8
+                        </option>
+                        <option value="29.0"> 29
+                        </option>
+                        <option value="29.2"> 29.2
+                        </option>
+                        <option value="30.0"> 30
+                        </option>
+                        <option value="31.0"> 31
+                        </option>
+                        <option value="31.4"> 31.4
+                        </option>
+                        <option value="32.0"> 32
+                        </option>
+                        <option value="33.0"> 33
+                        </option>
+                        <option value="34.0"> 34
+                        </option>
+                        <option value="34.8"> 34.8
+                        </option>
+                        <option value="35.0"> 35
+                        </option>
+                        <option value="35.5"> 35.5
+                        </option>
+                        <option value="36.0"> 36
+                        </option>
+                        <option value="36.6"> 36.6
+                        </option>
+                        <option value="37.0"> 37
+                        </option>
+                        <option value="37.5"> 37.5
+                        </option>
+                        <option value="38.0"> 38
+                        </option>
+                        <option value="39.0"> 39
+                        </option>
+                        <option value="39.5"> 39.5
+                        </option>
+                        <option value="40.0"> 40
+                        </option>
+                        <option value="41.0"> 41
+                        </option>
+                        <option value="42.0"> 42
+                        </option>
+                        <option value="43.0"> 43
+                        </option>
+                        <option value="44.7"> 44.7
+                        </option>
+                        <option value="45.0"> 45
+                        </option>
+                        <option value="46.0"> 46
+                        </option>
+                        <option value="46.8"> 46.8
+                        </option>
+                        <option value="47.0"> 47
+                        </option>
+                        <option value="48.0"> 48
+                        </option>
+                        <option value="48.5"> 48.5
+                        </option>
+                        <option value="50.0" selected=""> 50
+                        </option>
+                        <option value="50.8"> 50.8
+                        </option>
+                        <option value="50.9"> 50.9
+                        </option>
+                        <option value="51.0"> 51.0
+                        </option>
+                        <option value="51.2"> 51.2
+                        </option>
+                        <option value="51.6"> 51.6
+                        </option>
+                        <option value="52.0"> 52
+                        </option>
+                        <option value="53.0"> 53
+                        </option>
+                        <option value="54.0"> 54
+                        </option>
+                        <option value="55.0"> 55
+                        </option>
+                        <option value="55.2"> 55.2
+                        </option>
+                        <option value="56.0"> 56
+                        </option>
+                        <option value="58.0"> 58
+                        </option>
+                        <option value="59.0"> 59
+                        </option>
+                        <option value="60.0"> 60
+                        </option>
+                        <option value="61.0"> 61
+                        </option>
+                        <option value="63.0"> 63
+                        </option>
+                        <option value="63.2"> 63.2
+                        </option>
+                        <option value="65.0"> 65
+                        </option>
+                        <option value="66.0"> 66
+                        </option>
+                        <option value="66.7"> 66.7
+                        </option>
+                        <option value="69.0"> 69
+                        </option>
+                        <option value="69.9"> 69.9
+                        </option>
+                        <option value="70.0"> 70
+                        </option>
+                        <option value="71.2"> 71.2
+                        </option>
+                        <option value="71.5"> 71.5
+                        </option>
+                        <option value="72.0"> 72
+                        </option>
+                        <option value="75.0"> 75
+                        </option>
+                        <option value="76.0"> 76
+                        </option>
+                        <option value="80.0"> 80
+                        </option>
+                        <option value="85.0"> 85
+                        </option>
+                        <option value="86.0"> 86
+                        </option>
+                        <option value="88.8"> 88.8
+                        </option>
+                        <option value="89.0"> 89
+                        </option>
+                        <option value="90.0"> 90
+                        </option>
+                        <option value="95.0"> 95
+                        </option>
+                        <option value="100.0"> 100
+                        </option>
+                        <option value="101.0"> 101
+                        </option>
+                        <option value="102.0"> 102
+                        </option>
+                        <option value="103.0"> 103
+                        </option>
+                        <option value="104.0"> 104
+                        </option>
+                        <option value="105.0"> 105
+                        </option>
+                        <option value="106.0"> 106
+                        </option>
+                        <option value="108.0"> 108
+                        </option>
+                        <option value="110.0"> 110
+                        </option>
+                        <option value="111.0"> 111
+                        </option>
+                        <option value="114.0"> 114
+                        </option>
+                        <option value="115.0"> 115
+                        </option>
+                        <option value="117.0"> 117
+                        </option>
+                        <option value="120.0"> 120
+                        </option>
+                        <option value="121.0"> 121
+                        </option>
+                        <option value="123.0"> 123
+                        </option>
+                        <option value="125.0"> 125
+                        </option>
+                        <option value="127.0"> 127
+                        </option>
+                        <option value="130.0"> 130
+                        </option>
+                        <option value="135.0"> 135
+                        </option>
+                        <option value="140.0"> 140
+                        </option>
+                        <option value="145.0"> 145
+                        </option>
+                        <option value="150.0"> 150
+                        </option>
+                        <option value="152.0"> 152
+                        </option>
+                        <option value="155.0"> 155
+                        </option>
+                        <option value="160.0"> 160
+                        </option>
+                        <option value="165.0"> 165
+                        </option>
+                        <option value="168.0"> 168
+                        </option>
+                        <option value="170.0"> 170
+                        </option>
+                        <option value="180.0"> 180
+                        </option>
+                        <option value="190.0"> 190
+                        </option>
+                        <option value="200.0"> 200
+                        </option>
+                        <option value="203.0"> 203
+                        </option>
+                        <option value="205.0"> 205
+                        </option>
+                        <option value="210.0"> 210
+                        </option>
+                        <option value="215.0"> 215
+                        </option>
+                        <option value="240.0"> 240
+                        </option>
+                        <option value="250.0"> 250
+                        </option>
+                        <option value="254.0"> 254
+                        </option>
+                        <option value="255.0"> 255
+                        </option>
+                        <option value="260.0"> 260
+                        </option>
+                        <option value="270.0"> 270
+                        </option>
+                        <option value="280.0"> 280
+                        </option>
+                        <option value="300.0"> 300
+                        </option>
+                        <option value="305.0"> 305
+                        </option>
+                        <option value="320.0"> 320
+                        </option>
+                        <option value="350.0"> 350
+                        </option>
+                        <option value="355.0"> 355
+                        </option>
+                        <option value="360.0"> 360
+                        </option>
+                        <option value="375.0"> 375
+                        </option>
+                        <option value="380.0"> 380
+                        </option>
+                        <option value="400.0"> 400
+                        </option>
+                        <option value="420.0"> 420
+                        </option>
+                        <option value="450.0"> 450
+                        </option>
+                        <option value="480.0"> 480
+                        </option>
+                        <option value="500.0"> 500
+                        </option>
+                        <option value="600.0"> 600
+                        </option>
+                        <option value="610.0"> 610
+                        </option>
+                        <option value="720.0"> 720
+                        </option>
+                        <option value="800.0"> 800
+                        </option>
+                        <option value="1000.0"> 1000
+                        </option>
+                        <option value="1200.0">1200 </option>
+                    </select>
+                    
+                    <label for="aperture">Apertura:</label>
+                    <select id="aperture" >
+                        <option id="text8">Ítem 1</option>
+                        <option id="text9">Ítem 2</option>&lt;
+                        
+                        <option value="1"> f/1
+                        </option>
+                        <option value="1.414214"> f/1.4
+                        </option>
+                        <option value="1.587401"> f/1.6
+                        </option>
+                        <option value="1.681793"> f/1.7
+                        </option>
+                        <option value="1.781797"> f/1.8
+                        </option>
+                        <option value="2.000000"> f/2
+                        </option>
+                        <option value="2.244924"> f/2.2
+                        </option>
+                        <option value="2.378414"> f/2.4
+                        </option>
+                        <option value="2.519842"> f/2.5
+                        </option>
+                        <option value="2.828427" selected=""> f/2.8
+                        </option>
+                        <option value="3.174802"> f/3.2
+                        </option>
+                        <option value="3.363586"> f/3.4
+                        </option>
+                        <option value="3.563595"> f/3.6
+                        </option>
+                        <option value="4.000000"> f/4
+                        </option>
+                        <option value="4.489848"> f/4.5
+                        </option>
+                        <option value="4.756828"> f/4.8
+                        </option>
+                        <option value="5.039684"> f/5
+                        </option>
+                        <option value="5.656854"> f/5.6
+                        </option>
+                        <option value="6.349604"> f/6.4
+                        </option>
+                        <option value="6.727171"> f/6.7
+                        </option>
+                        <option value="7.127190"> f/7.1
+                        </option>
+                        <option value="8.000000"> f/8
+                        </option>
+                        <option value="8.979696"> f/9
+                        </option>
+                        <option value="9.513657"> f/9.5
+                        </option>
+                        <option value="10.07937"> f/10
+                        </option>
+                        <option value="11.313708"> f/11
+                        </option>
+                        <option value="12.699208"> f/12.7
+                        </option>
+                        <option value="13.454343"> f/13.5
+                        </option>
+                        <option value="14.254379"> f/14.3
+                        </option>
+                        <option value="16.000000"> f/16
+                        </option>
+                        <option value="17.959393"> f/18
+                        </option>
+                        <option value="19.027314"> f/19
+                        </option>
+                        <option value="20.158737"> f/20
+                        </option>
+                        <option value="22.627417"> f/22
+                        </option>
+                        <option value="25.398417"> f/25
+                        </option>
+                        <option value="26.908685"> f/27
+                        </option>
+                        <option value="28.508759"> f/28
+                        </option>
+                        <option value="32"> f/32
+                        </option>
+                        <option value="45.254834"> f/45
+                        </option>
+                        <option value="64">f/64 </option>
+                    </select>
+                    
+                              
+                    <label for="distancia">Distancia sujeto:</label>
+                     <input type="text" name="distancia" value="" id="distancia">
+                     
+                    <select name= "units" id="units" >
+                        <option value="1.0" selected=""> metros
+                        </option>
+                        <option value="0.01">cm.</option>
+                        <option value="0.3048">pies
+                        </option>
+                        <option value="0.0254">pulgadas </option>
+                    </select>
+                   
+                    
+		</div>
+	<div data-role="footer" data-position="fixed" >
+         <div data-role="navbar">
             <ul>
-                <li><a href="#Inicio" data-icon="home" class="ui-btn-active" data-transition="fade">Inicio</a></li>
-                <li><a href="#listado" data-icon="search" data-transition="fade">Listado</a></li>
-                <li><a href="#formulario" data-icon="star" data-transition="fade">Formulario</a></li>
+                <li onclick="doSelectCamara();"><a href="#page2" data-icon="search" class="ui-btn-active"                      data-transition="fade">Enviar</a></li>
             </ul>
-         </div>
-	</div>
+         </div>		
 	</div>
 </div>
 
-<div data-role="page" id="listado">
-	<div data-role="header">
-		<h1>Listado</h1>
+<div data-role="page" id="page2">
+	<div data-role="header"> 
+    	<h1>Resultado</h1>
 	</div>
-	<div data-role="content">
-     
-		  <ul data-role="listview" data-filter="true" data-filter-placeholder="Buscar ..." data-inset="true">
-            <li><a href="#Inicio">Inicio</a></li>
-            <li><a href="#listado">Listado</a></li>
-            <li><a href="#formulario">Formulario</a></li>
-        </ul>
+	<div data-role="content">	
 		
-    </div>
-	<div data-role="footer" data-position="fixed">
-     <div data-role="navbar">
-            <ul>
-                  <li><a href="#Inicio" data-icon="home" class="ui-btn-active" data-transition="fade">Inicio</a></li>
-                <li><a href="#listado" data-icon="search" data-transition="fade">Listado</a></li>
-                <li><a href="#formulario" data-icon="star" data-transition="fade">Formulario</a></li>
-            </ul>
-         </div>
+        
+                        <label for="dofNear">Limite delantero de enfoque:</label>
+                        <input type="text" name="dofNear" value="" id="dofNear">
+                        
+                        <label for="dofFar">Limite Trasero de enfoque:</label>
+                        <input type="text" name="dofFar" value="" id="dofFar">
+                        
+                        <label for="dofTotal">Profundidad de campo total:</label>
+                        <input type="text" name="dofTotal" value="" id="dofTotal">
+                                              
+                        <label for="dofFromt">Profundidad delantera del objeto:</label>
+                        <input type="text" name="dofFront" value="" id="dofFront">
+                        
+                        <label for="dofRear">Profundidad trasera del objeto:</label>
+                        <input type="text" name="dofRear" value="" id="dofRear">
+                        
+                        <label for="hyperFocal">Distancia Hiperfocal:</label>
+                        <input type="text" name="hyperFocal" value="46.6 m" id="hyperFocal">
+                        
+                         <label for="cocused">Circulo de Confusión camara:</label>
+                        <input type="text" name="cocused" value="0.03 mm" id="cocused">
+                      
+                  
+                      
+        
 	</div>
+	<div data-role="footer" data-position="fixed">
+		 <div data-role="navbar">
+            <ul>
+                <li> <a href="#page" data-icon="home" data-transition="fade" >Volver</a>  </li>
+            </ul>
+         </div>	
 	</div>
 </div>
-
-<div data-role="page" id="formulario">
-	<div data-role="header">
-		<h1>Formulario</h1>
-	</div>
-	<div data-role="content">
-     
-		 <form>
-            <label for="nombre">Nombre:</label>
-            <input type="text" name="nombre" id="nombre" value="" placeholder="Escriba su nombre" data-clear-btn="true">
-            <label for="mensaje">Mensaje:</label>
-            <textarea cols="40" rows="8" name="mensaje" id="mensaje" placeholder="Escriba su mensaje"></textarea>
-            <input type="button" value="Enviar" id="enviar" />
-        </form>
-		
-    </div>
-	<div data-role="footer" data-position="fixed">
-     <div data-role="navbar">
-            <ul>
-                  <li><a href="#Inicio" data-icon="home" class="ui-btn-active" data-transition="fade">Inicio</a></li>
-                <li><a href="#listado" data-icon="search" data-transition="fade">Listado</a></li>
-                <li><a href="#formulario" data-icon="star" data-transition="fade">Formulario</a></li>
-            </ul>
-         </div>
-	</div>
-	</div>
-</div>
-
 
 <script >
 
-$( "#hola-mundo" ).bind( "click", function(event, ui) {
-  alert("Hola Mundo!");
-});
-
 $( "#enviar" ).bind( "click", function(event, ui) {
-    var nombre = $("#nombre").val();
-    var mensaje = $("#mensaje").val();
-    alert('nombre: ' + nombre + '\nmensaje: ' + mensaje);
+ $.mobile.changePage($('#page2'), 'pop'); 
+   doSelectCamara() ;
 });
-</script>
 
-</body>
 
+function doSelectCamara()
+{
+	// colocar el coc en su input
+	
+	CoC = $( "#camara" ).value;
+	CoC = CoC*1.0;
+	$( "#cocused" ).value = CoC;
+
+
+	// calcular
+	
+	doDepthOfField();
+}
+
+// Calcular todos los datos
+
+function doDepthOfField() 
+{
+	// get input data from the form
+	var distance = document.getElementById("distancia").value;
+	var CoC = document.getElementById("camara").value;
+	var aperture = document.getElementById("aperture").value;
+	var focal = document.getElementById("focal").value;
+	var units = document.getElementById("units").value;
+ 
+	// ensure that we have numbers in the variables
+	focal = focal*1.0; 
+	aperture = aperture*1.0;
+	CoC = CoC*1.0;
+	units = units*1.0;
+
+	// comprobar que la dsitancia es ok
+	var bCalcDistance = true;
+	if (isNaN(distance) || distance <= 0)  
+		bCalcDistance = false;
+	
+	// calculate hyperfocal and near distance
+	var hyperFocal = (focal * focal) / (aperture * CoC) + focal;
+		
+	var dofNear = 0.0;
+	var dofFar = 0.0;
+	var dofTotal = 0.0;
+	var dofNearPercent = 0.0
+	var dofFarPercent = 0.0
+	if (bCalcDistance)
+	{
+		distance = distance*1000*units; // convert to millimeters
+		dofNear = ((hyperFocal - focal) * distance) / (hyperFocal + distance - (2*focal));
+	
+		// Prevent 'divide by zero' when calculating far distance.
+		if ( (hyperFocal - distance) <= 0.00001)
+			dofFar = 10000000.0; // set infinity at 10000m
+		else
+			dofFar = ((hyperFocal-focal) * distance) / (hyperFocal - distance);
+
+		// Calculate percentage of DOF in front and behind the subject.
+		dofNearPercent = (distance - dofNear)/(dofFar-dofNear) * 100.0;
+		dofFarPercent = (dofFar - distance)/(dofFar-dofNear) * 100.0;
+
+
+		// Convert depth of field numbers to proper units
+		dofNear = dofNear / 1000.0 / units;
+		dofFar  = dofFar / 1000.0 / units;
+		dofTotal = dofFar - dofNear;
+		distance = distance / 1000.0 / units;
+	}		
+
+	// convert hyperfocal distance to proper units
+	hyperFocal = hyperFocal / 1000.0 / units;
+		
+	// set the units string
+	if (units > 0.4)
+		unitsString = " m";
+	else if (units < 0.02)
+		unitsString = " cm";
+	else if (units < 0.1)
+		unitsString = " in";
+	else
+	  	unitsString = " ft";
+		
+	// transfer values to the form
+	if (hyperFocal < 10.0)
+		document.getElementById("hyperFocal").value  = Math.round(hyperFocal*100)/100 + unitsString;
+	else
+		document.getElementById("hyperFocal").value  = Math.round(hyperFocal*10)/10 + unitsString;
+		
+	if (bCalcDistance)
+	{
+		if (dofNear < 10.0)
+			document.getElementById("dofNear").value = Math.round(dofNear*100)/100 + unitsString;
+		else
+  			document.getElementById("dofNear").value = Math.round(dofNear*10)/10 + unitsString;
+  
+		if ( dofFar < 10000.0)
+		{	
+			if (dofFar < 10.0)
+		      	document.getElementById("dofFar").value  = Math.round(dofFar*100)/100 + unitsString;
+     		else
+      			document.getElementById("dofFar").value  = Math.round(dofFar*10)/10 + unitsString;
+				
+			if (dofTotal < 10.0)
+			{
+      			document.getElementById("dofTotal").value  = Math.round(dofTotal*100)/100 + unitsString;
+				document.getElementById("dofFront").value = Math.round((distance-dofNear)*100)/100 + unitsString +
+											"\t(" + Math.round(dofNearPercent) + "%)";
+				document.getElementById("dofRear").value = Math.round((dofFar - distance)*100)/100 + unitsString +
+											"\t(" + Math.round(dofFarPercent)  +  "%)";
+			}
+     		else
+			{
+      			document.getElementById("dofTotal").value  = Math.round(dofTotal*10)/10 + unitsString;
+				document.getElementById("dofFront").value = Math.round((distance-dofNear)*10)/10 + unitsString +
+				              "\t(" + Math.round(dofNearPercent) + "%)";
+				document.getElementById("dofRear").value = Math.round((dofFar - distance)*10)/10 + unitsString +
+											"\t(" + Math.round(dofFarPercent)  +  "%)";
+			}
+		}
+		else
+		{
+    		document.getElementById("dofFar").value  = "Infinity";
+    		document.getElementById("dofTotal").value  = "Infinite";
+			document.getElementById("dofFront").value = Math.round((distance-dofNear)*10)/10 + unitsString;
+			document.getElementById("dofRear").value = "Infinite";
+		}
+	}
+	else
+	{
+		document.getElementById("dofFar").value = " ";
+  		document.getElementById("dofNear").value = " ";
+  		document.getElementById("dofTotal").value = " ";
+		document.getElementById("dofFront").value = " ";
+		document.getElementById("dofRear").value = " ";
+	}
+
+	// ajustar el valor de CoC en la pantalla	
+	
+	document.getElementById("cocused").value = CoC + " mm"
+}
+
+//--></script>
+
+        
+        
+        
+        
+        
+        
+        
+        <script type="text/javascript" src="phonegap.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
 </html>
